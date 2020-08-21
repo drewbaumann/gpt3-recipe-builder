@@ -1,0 +1,35 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    dotenv (2.7.6)
+    httparty (0.18.1)
+      mime-types (~> 3.0)
+      multi_xml (>= 0.5.2)
+    mime-types (3.3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2020.0512)
+    multi_xml (0.6.0)
+    pastel (0.8.0)
+      tty-color (~> 0.5)
+    tty-color (0.5.2)
+    tty-cursor (0.7.1)
+    tty-prompt (0.22.0)
+      pastel (~> 0.8)
+      tty-reader (~> 0.8)
+    tty-reader (0.8.0)
+      tty-cursor (~> 0.7)
+      tty-screen (~> 0.8)
+      wisper (~> 2.0)
+    tty-screen (0.8.1)
+    wisper (2.0.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  dotenv
+  httparty
+  tty-prompt
+
+BUNDLED WITH
+   2.1.4
