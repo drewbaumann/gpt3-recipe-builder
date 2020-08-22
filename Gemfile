@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
 gem "dotenv"
-gem "httparty"
+gem "http"
+gem "titleize"
 gem "tty-prompt"
