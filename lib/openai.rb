@@ -1,4 +1,4 @@
-require "httparty"
+require "http"
 
 class OpenAI
   URI = "https://api.openai.com/v1"
@@ -8,17 +8,17 @@ class OpenAI
   end
 
   def completion(prompt:, max_tokens: 64, temperature: 1.0, stop: "<|endoftext|>")
-    request = HTTParty.post(
+    response = HTTP.headers(headers).post(
       "#{URI}/engines/davinci/completions",
-      headers: headers,
-      body: {
+      json: {
         prompt: prompt,
         max_tokens: max_tokens,
         temperature: temperature,
         stop: stop
-      }.to_json
+      }
     )
-    request.parsed_response
+
+    response.parse
   end
 
   private
